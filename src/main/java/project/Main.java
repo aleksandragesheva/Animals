@@ -26,9 +26,8 @@ public class Main {
             System.out.println("The rest of all the products for the next month:");
             System.out.println(cat.toString());
             System.out.println();
-            System.out.println(dog.toString());
-            System.out.println(cat.getDrinkExpenses());
-            System.out.println(dog.getDrinkExpenses());
+            System.out.println(dog.toString())
+
 
         }catch (IllegalArgumentException | NullPointerException ex){
             System.out.println(ex.getMessage());
