@@ -26,11 +26,12 @@ public abstract class AnimalImpl implements Animal {
     }
 
     public void setName(String name) {
+        String className = this.getClass().getSimpleName();
         if (name == null || name.trim().isEmpty()
                 || name.length() < 3) {
             throw new NullPointerException(
                     String.format("The name of the %s can't be null, whitespace or less than 3 letters!",
-                            this.getClass().getSimpleName())
+                            className.toLowerCase())
             );
 
         }
@@ -40,7 +41,7 @@ public abstract class AnimalImpl implements Animal {
             if(Character.isDigit(aChar)){
                 throw new IllegalArgumentException(
                         String.format("The name of the %s can't contain digits!",
-                                this.getClass().getSimpleName())
+                                className.toLowerCase())
                 );
             }
         }
@@ -48,10 +49,11 @@ public abstract class AnimalImpl implements Animal {
     }
 
     public void setKilos(double kilos) {
+        String className = this.getClass().getSimpleName();
         if(kilos <= 0 ){
             throw new IllegalArgumentException(
                     String.format("The Kilos of the %s cant't be 0 or less than 0",
-                            this.getClass().getSimpleName())
+                            className.toLowerCase())
             );
         }
         this.kilos = kilos;
