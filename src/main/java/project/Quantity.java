@@ -1,7 +1,7 @@
 package project;
 
 public enum Quantity {
-    Shampoo(500), CatFood(750), DogFood(5000), Water(10000);
+    SHAMPOO(500), CAT_FOOD(750), DOG_FOOD(5000), WATER(10000);
 
     private int ml;
     Quantity(int ml) {

@@ -2,10 +2,10 @@ package project;
 
 public class Dog extends AnimalImpl{
 
-    private static final double percentPerBody = 60;
+    private static final double PERCENT_PER_BODY = 60;
     public Dog(String name, double kilos) {
         super(name,kilos);
-        super.setDefaultPercentPerBody(percentPerBody);
+        super.setDefaultPercentPerBody(PERCENT_PER_BODY);
     }
 
     @Override
@@ -20,7 +20,7 @@ public class Dog extends AnimalImpl{
 
     @Override
     public double takeBathCost() {
-        double price = Prices.DogShampoo.getValue();
+        double price = Prices.DOG_SHAMPOO.getValue();
 
         int mililiters = 0;
         int cost = 0;
@@ -28,7 +28,7 @@ public class Dog extends AnimalImpl{
         for (int i = 0; i < 30; i++) {
 
             if (i % 30 == 0) {
-                mililiters += Quantity.Shampoo.getMl();
+                mililiters += Quantity.SHAMPOO.getMl();
                 cost += price;
             }
             if (i % 10 == 0) {
@@ -47,14 +47,14 @@ public class Dog extends AnimalImpl{
 
     @Override
     public double getFoodExpenses() {
-        double price = Prices.DogFood.getValue();
+        double price = Prices.DOG_FOOD.getValue();
         int grams = 0;
         double cost = 0;
 
         for (int i = 0; i < 30; i++) {
 
             if (i % 30 == 0) {
-                grams += Quantity.DogFood.getMl();
+                grams += Quantity.DOG_FOOD.getMl();
                 cost += price;
             }
 
@@ -72,7 +72,7 @@ public class Dog extends AnimalImpl{
 
     @Override
     public double takeRestOfShampooMilliliters() {
-        double price = Prices.DogShampoo.getValue();
+        double price = Prices.DOG_SHAMPOO.getValue();
 
         int mililiters = 0;
         int cost = 0;
@@ -80,7 +80,7 @@ public class Dog extends AnimalImpl{
         for (int i = 0; i < 30; i++) {
 
             if (i % 30 == 0) {
-                mililiters += Quantity.Shampoo.getMl();
+                mililiters += Quantity.SHAMPOO.getMl();
                 cost += price;
             }
             if (i % 10 == 0) {
@@ -99,14 +99,14 @@ public class Dog extends AnimalImpl{
 
     @Override
     public double takeRestOfFoodGrams() {
-        double price = Prices.DogFood.getValue();
+        double price = Prices.DOG_FOOD.getValue();
         int grams = 0;
         double cost = 0;
 
         for (int i = 0; i < 30; i++) {
 
             if (i % 30 == 0) {
-                grams += Quantity.DogFood.getMl();
+                grams += Quantity.DOG_FOOD.getMl();
                 cost += price;
             }
 

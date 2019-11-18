@@ -14,7 +14,7 @@ public class Cat extends AnimalImpl {
     @Override
     public double takeBathCost() {
 
-        double price = Prices.CatShampoo.getValue();
+        double price = Prices.CAT_SHAMPOO.getValue();
 
         int mililiters = 0;
         double cost = 0;
@@ -22,7 +22,7 @@ public class Cat extends AnimalImpl {
         for (int i = 0; i < 30; i++) {
 
             if (i % 30 == 0) {
-                mililiters += Quantity.Shampoo.getMl();
+                mililiters += Quantity.SHAMPOO.getMl();
                 cost += price;
             }
             if (i % 10 == 0) {
@@ -43,7 +43,7 @@ public class Cat extends AnimalImpl {
     @Override
     public double getFoodExpenses() {
 
-        double price = Prices.CatFood.getValue();
+        double price = Prices.CAT_FOOD.getValue();
         int grams = 0;
         double cost = 0;
 
@@ -51,7 +51,7 @@ public class Cat extends AnimalImpl {
 
             if (i % 30 == 0) {
 
-                grams += Quantity.CatFood.getMl();
+                grams += Quantity.CAT_FOOD.getMl();
                 cost += price;
             }
 
@@ -70,14 +70,14 @@ public class Cat extends AnimalImpl {
     @Override
     public double takeRestOfShampooMilliliters() {
 
-        double price = Prices.CatShampoo.getValue();
+        double price = Prices.CAT_SHAMPOO.getValue();
 
         int mililiters = 0;
         double cost = 0;
 
         for (int i = 0; i < 30; i++) {
             if (i % 30 == 0) {
-                mililiters += Quantity.Shampoo.getMl();
+                mililiters += Quantity.SHAMPOO.getMl();
                 cost += price;
             }
             if (i % 10 == 0) {
@@ -96,7 +96,7 @@ public class Cat extends AnimalImpl {
     @Override
     public double takeRestOfFoodGrams() {
 
-        double price = Prices.CatFood.getValue();
+        double price = Prices.CAT_FOOD.getValue();
         int grams = 0;
         double cost = 0;
 
@@ -104,7 +104,7 @@ public class Cat extends AnimalImpl {
 
             if (i % 30 == 0) {
 
-                grams += Quantity.CatFood.getMl();
+                grams += Quantity.CAT_FOOD.getMl();
                 cost += price;
             }
 

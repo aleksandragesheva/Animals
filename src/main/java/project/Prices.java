@@ -1,8 +1,8 @@
 package project;
 
 public enum Prices {
-    DogShampoo(5.0), CatShampoo(3.5), DogFood(15), CatFood(13)
-    ,Water(5);
+    DOG_SHAMPOO(5.0), CAT_SHAMPOO(3.5), DOG_FOOD(15), CAT_FOOD(13)
+    , WATER(5);
 
     private double value;
     Prices(double value) {

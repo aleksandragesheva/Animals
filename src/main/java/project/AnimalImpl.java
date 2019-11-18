@@ -1,10 +1,8 @@
 package project;
 
-import project.Animal;
-
 public abstract class AnimalImpl implements Animal {
-    private static final int days = 30;
-    private static final double percentPerBody = 0.03;
+    private static final int DAYS = 30;
+    private static final double PERCENT_PER_BODY = 0.03;
 
     private String name;
     private double kilos;
@@ -13,7 +11,7 @@ public abstract class AnimalImpl implements Animal {
     public AnimalImpl(String name, double kilos) {
         this.setName(name);
         this.setKilos(kilos);
-        this.setDefaultPercentPerBody(percentPerBody);
+        this.setDefaultPercentPerBody(PERCENT_PER_BODY);
 
     }
 
@@ -65,15 +63,15 @@ public abstract class AnimalImpl implements Animal {
 
     @Override
     public double getDrinkExpenses() {
-        double price = Prices.Water.getValue();
+        double price = Prices.WATER.getValue();
         double ml = 0;
         double quantityWater = this.defaultPercentPerBody * this.kilos;
         double cost = 0;
 
-        for (int day = 0; day < days; day++) {
+        for (int day = 0; day < DAYS; day++) {
 
             if (day % 30 == 0) {
-                ml += Quantity.Water.getMl();
+                ml += Quantity.WATER.getMl();
                 cost += price;
             }
 
@@ -82,7 +80,7 @@ public abstract class AnimalImpl implements Animal {
 
             } else {
 
-                ml += (Quantity.Water.getMl() - quantityWater);
+                ml += (Quantity.WATER.getMl() - quantityWater);
                 cost += price;
             }
 
@@ -92,15 +90,15 @@ public abstract class AnimalImpl implements Animal {
 
     @Override
     public double getRestOfWaterMilliliters() {
-        double price = Prices.Water.getValue();
+        double price = Prices.WATER.getValue();
         double ml = 0;
         double quantityWater = this.defaultPercentPerBody * this.kilos;
         double cost = 0;
 
-        for (int day = 0; day < days; day++) {
+        for (int day = 0; day < DAYS; day++) {
 
             if (day % 30 == 0) {
-                ml += Quantity.Water.getMl();
+                ml += Quantity.WATER.getMl();
                 cost += price;
             }
 
@@ -109,7 +107,7 @@ public abstract class AnimalImpl implements Animal {
 
             } else {
 
-                ml += (Quantity.Water.getMl() - quantityWater);
+                ml += (Quantity.WATER.getMl() - quantityWater);
                 cost += price;
             }
 
